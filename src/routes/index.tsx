@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import portrait from "@/assets/touheed-portrait.asset.json";
+import socialImg from "@/assets/touheed-social.png.asset.json";
 import auraStudio from "@/assets/aura-studio.asset.json";
 import neoncode from "@/assets/neoncode.asset.json";
 import estate from "@/assets/estate.asset.json";
@@ -349,20 +350,43 @@ function Connect() {
           </h2>
         </div>
 
-        <Frame className="">
-          <div className="grid grid-cols-1 md:grid-cols-3">
-            {links.map((l, i) => (
-              <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer" className={`group relative p-8 md:p-10 flex flex-col justify-between gap-12 min-h-[260px] transition-all hover:bg-[var(--violet)]/8 ${i !== 0 ? "border-t md:border-t-0 md:border-l border-border" : ""}`}>
-                <div className="flex items-start justify-between font-mono text-[10px] uppercase tracking-[0.25em]">
-                  <span style={{ color: "var(--gold)" }}>CH · {l.code}</span>
-                  <span className="text-[var(--muted)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" >↗</span>
-                </div>
-                <div>
-                  <div className="font-head text-xl md:text-2xl uppercase tracking-[0.18em] leading-tight">{l.label}</div>
-                  <div className="mt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">{l.sub}</div>
-                </div>
-              </a>
-            ))}
+        <Frame className="p-3 md:p-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            {/* Portrait Panel */}
+            <div className="relative overflow-hidden">
+              <img
+                src={socialImg.url}
+                alt="Touheed Abbasi — Creative Portrait"
+                className="w-full aspect-square md:aspect-[4/5] object-cover"
+              />
+              <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(180deg, transparent 50%, rgba(8,8,8,0.65) 100%)" }} />
+              <div className="absolute left-4 bottom-4 right-4 flex items-end justify-between font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--foreground)]">
+                <span>Fig · 002</span>
+                <span style={{ color: "var(--gold)" }}>Social Identity</span>
+              </div>
+            </div>
+
+            {/* Links Panel */}
+            <div className="flex flex-col">
+              {links.map((l, i) => (
+                <a
+                  key={l.label}
+                  href={l.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`group relative flex-1 p-6 md:p-8 flex flex-col justify-between gap-6 transition-all hover:bg-[var(--violet)]/8 ${i !== 0 ? "border-t border-border" : ""}`}
+                >
+                  <div className="flex items-start justify-between font-mono text-[10px] uppercase tracking-[0.25em]">
+                    <span style={{ color: "var(--gold)" }}>CH · {l.code}</span>
+                    <span className="text-[var(--muted)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+                  </div>
+                  <div>
+                    <div className="font-head text-lg md:text-xl uppercase tracking-[0.18em] leading-tight">{l.label}</div>
+                    <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">{l.sub}</div>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
         </Frame>
 
