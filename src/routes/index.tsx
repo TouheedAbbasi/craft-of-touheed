@@ -90,12 +90,20 @@ function useReveal() {
 }
 
 function HeroTitle() {
-  const text = "TOUHEED ABBASI";
+  const words = ["TOUHEED", "ABBASI"];
+  let charIndex = 0;
   return (
-    <h1 className="font-head text-[11vw] md:text-[10vw] leading-[0.9] tracking-tight uppercase">
-      {text.split("").map((c, i) => (
-        <span key={i} className="letter" style={{ animationDelay: `${0.25 + i * 0.06}s` }}>
-          {c === " " ? " " : c}
+    <h1 className="font-head text-[9vw] sm:text-[11vw] md:text-[10vw] leading-[0.9] tracking-tight uppercase flex flex-wrap gap-x-[2vw] gap-y-0">
+      {words.map((word, wi) => (
+        <span key={wi} className="whitespace-nowrap">
+          {word.split("").map((c, i) => {
+            const delay = 0.25 + charIndex++ * 0.06;
+            return (
+              <span key={i} className="letter" style={{ animationDelay: `${delay}s` }}>
+                {c}
+              </span>
+            );
+          })}
         </span>
       ))}
     </h1>
