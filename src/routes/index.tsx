@@ -191,12 +191,12 @@ function Hero() {
         <div className="mt-10 md:mt-14 grid grid-cols-12 gap-4 md:gap-6">
           <div className="col-span-12 lg:col-span-8 relative">
             <div className="flex flex-col gap-2 md:gap-4">
-              <p className="font-display italic text-[10vw] md:text-[7.2vw] leading-[0.85] text-balance" style={{ color: "var(--foreground)" }}>
+              <p className="font-display italic text-[8vw] md:text-[7.2vw] leading-[0.85] text-balance" style={{ color: "var(--foreground)" }}>
                 Next<span style={{ color: "var(--gold)" }}>—</span>Gen
               </p>
               <HeroTitle />
-              <p className="font-display italic text-[10vw] md:text-[7.2vw] leading-[0.85] pl-[8vw] md:pl-[14vw]">
-                <span className="font-head not-italic text-[5vw] md:text-[3.4vw] align-middle mr-3" style={{ color: "var(--gold)" }}>§</span>
+              <p className="font-display italic text-[8vw] md:text-[7.2vw] leading-[0.85] pl-[6vw] md:pl-[14vw]">
+                <span className="font-head not-italic text-[4vw] md:text-[3.4vw] align-middle mr-3" style={{ color: "var(--gold)" }}>§</span>
                 Craftsmanship.
               </p>
             </div>
