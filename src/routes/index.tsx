@@ -92,10 +92,10 @@ function useReveal() {
 function HeroTitle() {
   const text = "TOUHEED ABBASI";
   return (
-    <h1 className="font-head text-[14vw] md:text-[10vw] leading-[0.9] tracking-tight uppercase">
+    <h1 className="font-head text-[11vw] md:text-[10vw] leading-[0.9] tracking-tight uppercase">
       {text.split("").map((c, i) => (
         <span key={i} className="letter" style={{ animationDelay: `${0.25 + i * 0.06}s` }}>
-          {c === " " ? "\u00A0" : c}
+          {c === " " ? " " : c}
         </span>
       ))}
     </h1>
