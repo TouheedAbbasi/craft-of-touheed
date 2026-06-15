@@ -377,7 +377,7 @@ function Connect() {
             {/* Links Panel */}
             <div className="flex flex-col">
               {links.map((l, i) => (
-                <a
+              <a
                   key={l.label}
                   href={l.href}
                   target="_blank"
@@ -388,9 +388,30 @@ function Connect() {
                     <span style={{ color: "var(--gold)" }}>CH · {l.code}</span>
                     <span className="text-[var(--muted)] transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
                   </div>
-                  <div>
-                    <div className="font-head text-lg md:text-xl uppercase tracking-[0.18em] leading-tight">{l.label}</div>
-                    <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">{l.sub}</div>
+                  <div className="flex items-end justify-between gap-4">
+                    <div>
+                      <div className="font-head text-lg md:text-xl uppercase tracking-[0.18em] leading-tight">{l.label}</div>
+                      <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.22em] text-[var(--muted)]">{l.sub}</div>
+                    </div>
+                    <div className="shrink-0 opacity-60 group-hover:opacity-100 transition-opacity">
+                      {i === 0 && (
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--gold)]">
+                          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.6-5.7A8.38 8.38 0 0 1 3.5 11.5a8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                        </svg>
+                      )}
+                      {i === 1 && (
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--gold)]">
+                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                      )}
+                      {i === 2 && (
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--gold)]">
+                          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                      )}
+                    </div>
                   </div>
                 </a>
               ))}
