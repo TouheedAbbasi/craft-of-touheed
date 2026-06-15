@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import portrait from "@/assets/touheed-portrait.asset.json";
+import portrait from "@/assets/touheed-hero.asset.json";
 import socialImg from "@/assets/touheed-social.png.asset.json";
 import auraStudio from "@/assets/aura-studio.asset.json";
 import neoncode from "@/assets/neoncode.asset.json";
